@@ -70,5 +70,5 @@ st.write(fig2)
 
 st.write('These graphs shows the changes of stock price trend based on day of week and year')
 
-if __name__ == '__main__':
-  main()
+# if __name__ == '__main__':
+#   main()
