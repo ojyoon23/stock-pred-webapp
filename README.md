@@ -4,7 +4,7 @@ Link: https://aqueous-atoll-12418.herokuapp.com/
 
 A Stock Forecast / Prediction Web Application made using Streamlit & fbprophet
 
-* Data is from yahoo finance
+* Data automatically gets loaded from yahoo finance
 
 * Packages used
   - Machine Learning: fbprophet 
@@ -15,7 +15,7 @@ A Stock Forecast / Prediction Web Application made using Streamlit & fbprophet
   
 * Users can
   - Search up by Company by typing its ticker
-  - See the trend of stock price from 2016-01-01 to current, when the user opens up as data roads automatically
+  - See the trend of stock price from 2016-01-01 to current, when the user opens up
   - Interactively play with graph to adjust the trend by year and hover on the graph
 
 * Things to improve later on
