@@ -30,7 +30,7 @@ def plot_raw_data():
     fig = go.Figure()
     fig.add_trace(go.Scatter(x = df['Date'],y=df['Open'], name = 'stock open'))
     fig.add_trace(go.Scatter(x = df['Date'], y=df['Close'], name = 'stock close'))
-    fig.layout.update(title_text="Time Series Data", xaxis_rangeslider_visible=True)
+    fig.layout.update(title_text="Time series data", xaxis_rangeslider_visible=True)
     st.plotly_chart(fig)
 
 plot_raw_data()
@@ -42,7 +42,7 @@ for day in ma_day:
     col_name = f"MA for {day} days"
     df[col_name] = df['Close'].rolling(day).mean()
 
-st.subheader('Closing Price with Moving Average')
+st.subheader('Closing price with moving average')
 fig = px.line(df[['Close', 'MA for 20 days', 'MA for 100 days']], width=800, height=450)
 st.plotly_chart(fig)
 
@@ -61,7 +61,7 @@ st.write('Forecast data table')
 st.write(forecast.tail())
 
 fig1 = plot_plotly(m, forecast)
-fig1.layout.update(title_text="Forcast Data")
+fig1.layout.update(title_text="Predicted stock price")
 st.plotly_chart(fig1)
 
 st.write('Forecast components')
