@@ -1,7 +1,9 @@
 # stock-pred-webapp
 
 Link: https://stock-pred-app-2.herokuapp.com/
+
 Old Link: <del> https://aqueous-atoll-12418.herokuapp.com/ </del>
+
 
 A Stock Forecast / Prediction Web Application made using Streamlit & fbprophet
 
