@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import pandas_datareader import data as pdr
+from pandas_datareader import data as pdr
 import plotly.express as px
 import pystan
 from datetime import datetime as dt
