@@ -1,6 +1,7 @@
 # stock-pred-webapp
 
-Link: https://aqueous-atoll-12418.herokuapp.com/
+Link: https://stock-pred-app-2.herokuapp.com/
+Old Link: <del> https://aqueous-atoll-12418.herokuapp.com/ </del>
 
 A Stock Forecast / Prediction Web Application made using Streamlit & fbprophet
 
@@ -15,7 +16,7 @@ A Stock Forecast / Prediction Web Application made using Streamlit & fbprophet
   
 * Users can
   - Search up by Company by typing its ticker
-  - See the trend of stock price from 2016-01-01 to current, when the user opens up
+  - See the trend of stock price from 2017-01-01 to current, when the user opens up
   - Interactively play with graph to adjust the trend by year and hover on the graph
 
 * Things to improve later on
