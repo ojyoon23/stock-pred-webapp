@@ -13,7 +13,7 @@ import streamlit as st
 
 #yf.pdr_override()
 
-start_date = dt(2016,01,01)
+start_date = '2016-01-01'
 end_date = dt.now()
 
 st.title('Stock Trend Forecasting App')
