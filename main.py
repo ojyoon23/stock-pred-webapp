@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from pandas_datareader import data as pdr
 import plotly.express as px
 import pystan
-from datetime import datetime
+from datetime import datetime as dt
 from fbprophet import Prophet
 from fbprophet.plot import plot_plotly
 from plotly import graph_objs as go
@@ -13,13 +13,13 @@ import yfinance as yf
 
 yf.pdr_override()
 
-start = '2016-01-01'
-end = datetime.now()
+start_date = dt.datetime(2016,1,1)
+end_date = dt.now()
 
 st.title('Stock Trend Forecasting App')
 
 user_input = st.text_input('Enter Stock Ticker', 'AAPL')
-df = pdr.get_data_yahoo(user_input, 'yahoo', start, end)
+df = pdr.get_data_yahoo(user_input, 'yahoo', start = start_date, end = end_date)
 df.head()
 df = df.reset_index()
 
