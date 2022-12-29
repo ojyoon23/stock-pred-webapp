@@ -11,6 +11,7 @@ from plotly import graph_objs as go
 import streamlit as st
 import yfinance as yf
 
+
 yf.pdr_override()
 
 start_date = dt(2017,1,1)
@@ -72,6 +73,27 @@ fig2 = m.plot_components(forecast)
 st.write(fig2)
 
 st.write('These graphs shows the changes of stock price trend based on day of week and year')
+
+
+google_analytics_js = """
+<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-6W2QMPS9F7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-6W2QMPS9F7");
+    </script>
+    """
+#st.components.v1.html(google_analytics_js)
+
+#st.components.v1.html(fb_comments)
+#st.components.v1.iframe('https://covid19.aipert.org/google_analytics.html', height=1, scrolling=False)
 
 # if __name__ == '__main__':
 #   main()
