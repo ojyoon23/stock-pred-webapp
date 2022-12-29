@@ -14,12 +14,12 @@ import streamlit as st
 #yf.pdr_override()
 
 start_date = '2016-01-01'
-end_date = dt.now()
+end_date = dt.today()
 
 st.title('Stock Trend Forecasting App')
 
 user_input = st.text_input('Enter Stock Ticker', 'AAPL')
-df = pdr.yahoo.daily.YahooDailyReader(user_input, start = start_date, end = end_date)
+df = pdr.get_data_yahoo(symbols = [user_input], start = start_date, end = end_date)
 df.head()
 df = df.reset_index()
 
