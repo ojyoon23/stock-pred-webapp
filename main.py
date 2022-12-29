@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import pandas_datareader as data
+from pandas_datareader import data as pdr
 import plotly.express as px
 import pystan
 from datetime import datetime
@@ -9,6 +9,9 @@ from fbprophet import Prophet
 from fbprophet.plot import plot_plotly
 from plotly import graph_objs as go
 import streamlit as st
+import yfinance as yf
+
+yf.pdr_override()
 
 start = '2016-01-01'
 end = datetime.now()
@@ -16,7 +19,7 @@ end = datetime.now()
 st.title('Stock Trend Forecasting App')
 
 user_input = st.text_input('Enter Stock Ticker', 'AAPL')
-df = data.DataReader(user_input, 'yahoo', start, end)
+df = pdr.get_data_yahoo(user_input, 'yahoo', start, end)
 df.head()
 df = df.reset_index()
 
