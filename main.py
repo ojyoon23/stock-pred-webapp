@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import pandas_datareader as pdr
+import pandas_datareader import data as pdr
 import plotly.express as px
 import pystan
 from datetime import datetime as dt
@@ -9,11 +9,11 @@ from fbprophet import Prophet
 from fbprophet.plot import plot_plotly
 from plotly import graph_objs as go
 import streamlit as st
-#import yfinance as yf
+import yfinance as yf
 
-#yf.pdr_override()
+yf.pdr_override()
 
-start_date = '2016-01-01'
+start_date = dt(2017,1,1)
 end_date = dt.today()
 
 st.title('Stock Trend Forecasting App')
