@@ -1,7 +1,6 @@
 numpy
 pandas
 pandas_datareader
-data
 plotly.express
 pystan==2.19.1.1
 datetime
@@ -9,4 +8,3 @@ fbprophet==0.7.1
 Prophet
 plotly 
 streamlit
-yfinance
