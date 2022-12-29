@@ -12,7 +12,7 @@ A Stock Forecast / Prediction Web Application made using Streamlit & fbprophet
 * Packages used
   - Machine Learning: fbprophet 
   - Web Application: streamlit
-  - Data Manipulation: pands, numpy
+  - Data Manipulation: pandas, numpy
   - Data Visualization: matplotlib, plotly
   - Data Import: pandas_datareader
   
@@ -20,6 +20,9 @@ A Stock Forecast / Prediction Web Application made using Streamlit & fbprophet
   - Search up by Company by typing its ticker
   - See the trend of stock price from 2017-01-01 to current, when the user opens up
   - Interactively play with graph to adjust the trend by year and hover on the graph
+  
+* Bonuses
+  - Integrated with Google Analytics to monitor website performance 
 
 * Things to improve later on
   - Slow loading
