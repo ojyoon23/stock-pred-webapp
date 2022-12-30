@@ -7,6 +7,13 @@ Old Link: <del> https://aqueous-atoll-12418.herokuapp.com/ </del>
 
 A Stock Forecast / Prediction Web Application made using Streamlit & fbprophet
 
+
+Screenshot
+
+<img width="795" alt="Screen Shot 2022-12-29 at 5 51 39 PM" src="https://user-images.githubusercontent.com/75292532/210026707-f47e1781-3a4c-4e84-804a-d7695d6ba9f3.png">
+
+
+
 * Data automatically gets loaded from yahoo finance
 
 * Packages used
