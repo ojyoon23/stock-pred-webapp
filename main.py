@@ -92,8 +92,12 @@ google_analytics_js = """
     """
 #st.components.v1.html(google_analytics_js)
 
+fb_comments = """
+        <div class="fb-comments" data-href="https://stock-pred-app-2.herokuapp.com/" data-numposts="5" data-width=""></div>
+        """
 #st.components.v1.html(fb_comments)
-#st.components.v1.iframe('https://covid19.aipert.org/google_analytics.html', height=1, scrolling=False)
+st.components.v1.iframe('https://stock-pred-app-2.herokuapp.com/google_analytics.html', height=1, scrolling=False)
+
 
 # if __name__ == '__main__':
 #   main()
