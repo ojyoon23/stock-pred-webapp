@@ -17,14 +17,14 @@ Screenshot
 * Data automatically gets loaded from yahoo finance
 
 * Packages used
-  - Machine Learning: fbprophet 
+  - Machine Learning: LSTM, fbprophet 
   - Web Application: streamlit
   - Data Manipulation: pandas, numpy
   - Data Visualization: matplotlib, plotly
   - Data Import: pandas_datareader
   
 * Users can
-  - Search up by Company by typing its ticker
+  - Search up by company by typing its ticker
   - See the trend of stock price from 2017-01-01 to current, when the user opens up
   - Interactively play with graph to adjust the trend by year and hover on the graph
   
@@ -33,4 +33,3 @@ Screenshot
 
 * Things to improve later on
   - Slow loading
-  - Try using different Machine Learning model such as LSTM and ARIMA
