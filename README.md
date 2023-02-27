@@ -17,7 +17,7 @@ Screenshot
 * Data automatically gets loaded from yahoo finance
 
 * Packages used
-  - Machine Learning: fbprophet 
+  - Machine Learning: LSTM, fbprophet 
   - Web Application: streamlit
   - Data Manipulation: pandas, numpy
   - Data Visualization: matplotlib, plotly
@@ -33,4 +33,3 @@ Screenshot
 
 * Things to improve later on
   - Slow loading
-  - Try using different Machine Learning model such as LSTM and ARIMA
