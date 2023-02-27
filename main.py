@@ -30,11 +30,12 @@ period = n_years * 365
 st.subheader('Raw data for the last five days')
 st.write(df.tail())
 
+st.subheader('Open vs closing stock price')
 def plot_raw_data():
     fig = go.Figure()
     fig.add_trace(go.Scatter(x = df['Date'],y=df['Open'], name = 'stock open'))
     fig.add_trace(go.Scatter(x = df['Date'], y=df['Close'], name = 'stock close'))
-    fig.layout.update(title_text="Time series data", xaxis_rangeslider_visible=True)
+    fig.layout.update(xaxis_rangeslider_visible=True)
     st.plotly_chart(fig)
 
 plot_raw_data()
@@ -46,12 +47,12 @@ for day in ma_day:
     col_name = f"MA for {day} days"
     df[col_name] = df['Close'].rolling(day).mean()
 
-st.subheader('Closing price with moving average')
+st.subheader('Closing price with different moving average values')
 fig = px.line(df[['Close', 'MA for 20 days', 'MA for 100 days']], width=800, height=450)
 st.plotly_chart(fig)
 
 
-#Forecasting
+#Forecasting - Prophet model
 df_train = df[['Date', 'Close']]
 df_train = df_train.rename(columns = {"Date": "ds", "Close": "y"})
 
@@ -60,19 +61,22 @@ m.fit(df_train)
 future = m.make_future_dataframe(periods = period)
 forecast = m.predict(future)
 
-st.subheader('Forecast data')
-st.write('Forecast data table')
+st.subheader('Forecasted stock price using Prophet')
+st.write('Forecasted stock table')
 st.write(forecast.tail())
 
+st.write('Forecasted stock plot')
 fig1 = plot_plotly(m, forecast)
-fig1.layout.update(title_text="Predicted stock price")
+#fig1.layout.update(title_text="Predicted stock price")
 st.plotly_chart(fig1)
 
 st.write('Forecast components')
 fig2 = m.plot_components(forecast)
 st.write(fig2)
 
-st.write('These graphs shows the changes of stock price trend based on day of week and year')
+st.write('These graphs show the yearly, daily, and monthly changes of stock price trend')
+
+st.subheader('Forecasted stock price using LSTM')
 
 
 google_analytics_js = """
